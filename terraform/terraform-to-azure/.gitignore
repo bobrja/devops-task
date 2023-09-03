@@ -5,6 +5,11 @@
 *.tfstate
 *.tfstate.*
 
+# plan file
+main.tf.*
+main.rf.*.*
+*.terraform.*.*
+
 # Crash log files
 crash.log
 crash.*.log

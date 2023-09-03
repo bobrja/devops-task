@@ -8,7 +8,7 @@
 # plan file
 main.tf.*
 main.rf.*.*
-*.terraform.*.*
+.terraform.*.*
 
 # Crash log files
 crash.log

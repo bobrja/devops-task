@@ -1,7 +1,6 @@
 variable "project" {
   description = "Your project name"
   type        = string
-  default = "gcp-terraform-softserve"
 }
 
 variable "region" {

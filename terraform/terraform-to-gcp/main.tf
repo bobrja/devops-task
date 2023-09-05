@@ -23,7 +23,7 @@ resource "google_compute_network" "vpc_network" {
 resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {
     name = var.subnet_name
     ip_cidr_range = var.subnet_cidr
-    network = google_compute_network.vpc_network.id
+    network = google_compute_network.vpc_network.name
 }
 
 resource "google_compute_instance" "vm_instance" {

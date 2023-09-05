@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "google" {
-  credentials = file(var.credentials_file)
-  
+  credentials = file("~/.ssh/gcp-terraform-softserve-a4b27cbd0f8e.json")
+
   project = var.project
   region  = var.region
   zone    = var.zone

@@ -4,10 +4,6 @@ variable "project" {
   default = "gcp-terraform-softserve"
 }
 
-variable "credentials_file" {
-  
-}
-
 variable "region" {
   description = "default region to deploy infrastructure"
   type        = string

@@ -8,14 +8,10 @@ terraform {
 }
 
 provider "google" {
-  credentials = file("~/.ssh/gcp-terraform-softserve-a4b27cbd0f8e.json")
-  
-  region  = "us-central1"
-  zone    = "us-central1-c"
-}
-
-resource "google_project" "name_project" {
-    name = var.project
+  credentials = file(var.credentials_file)
+  project = var.project
+  region  = var.region
+  zone    = var.zone
 }
 
 resource "google_compute_network" "vpc_network" {

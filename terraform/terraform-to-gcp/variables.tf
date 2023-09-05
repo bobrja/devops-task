@@ -13,14 +13,14 @@ variable "region" {
 variable "zone" {
   type        = string
   description = "The availability zone where the instance will be deployed"
-  default     = "europe-central-1a"
+  default     = "eu-central-1a"
 }
 
-variable "network_name" {
-  description = "The name of the network"
-  type        = string
-  default     = "development"
-}
+#variable "network_name" {
+#  description = "The name of the network"
+#  type        = string
+#  default     = "development"
+#}
 
 variable "subnet_name" {
   description = "The name of the subnetwork"

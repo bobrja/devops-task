@@ -38,6 +38,7 @@ resource "google_compute_instance" "vm_instance" {
 
   network_interface {
     network = google_compute_network.vpc_network.name
+    subnetwork = google_compute_network.vpc_network.gateway_ipv4
     access_config {
     }
   }

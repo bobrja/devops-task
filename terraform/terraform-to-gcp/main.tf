@@ -45,7 +45,8 @@ resource "google_compute_instance" "vm_instance" {
   network_interface {
     network = google_compute_network.vpc_network.name
     subnetwork = google_compute_subnetwork.network-with-private-secondary-ip-ranges.id
-  # access_config {
+    
+    access_config {
     }
     
     metadata_startup_script = <<-EOF

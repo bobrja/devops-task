@@ -58,6 +58,7 @@ resource "google_compute_instance" "vm_instance" {
     
     allow_stopping_for_update = true
 }
+}
 
 resource "google_compute_firewall" "instance_firewall" {
   name    = "allow-instance-ports"

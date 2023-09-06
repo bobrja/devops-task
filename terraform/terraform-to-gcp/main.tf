@@ -32,7 +32,7 @@ data "google_compute_image" "image" {
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = var.instance_name
+  name = "${var.instance_name}-${var.environment}"
   machine_type = var.instance_type
   tags = var.network_tags
 

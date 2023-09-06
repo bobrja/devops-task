@@ -48,6 +48,7 @@ resource "google_compute_instance" "vm_instance" {
     
     access_config {
     }
+  }
     
     metadata_startup_script = <<-EOF
     #!/bin/bash
@@ -57,7 +58,6 @@ resource "google_compute_instance" "vm_instance" {
     EOF
     
     allow_stopping_for_update = true
-}
 }
 
 resource "google_compute_firewall" "instance_firewall" {

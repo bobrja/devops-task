@@ -27,8 +27,8 @@ resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" 
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance"
-  machine_type = "f1-micro"
+  name         = var.instance_name
+  machine_type = var.instance_type
 
   boot_disk {
     initialize_params {
@@ -39,6 +39,7 @@ resource "google_compute_instance" "vm_instance" {
   network_interface {
     network = google_compute_network.vpc_network.name
     subnetwork = google_compute_subnetwork.network-with-private-secondary-ip-ranges.id
+    tags = var.network_tags
    access_config {
     }
   }

@@ -30,7 +30,7 @@ variable "subnet_name" {
 variable "subnet_cidr" {
   default = "10.0.0.0/16"
   type    = string
-}
+} #done ############
 
 variable "image_family" {
   description = "The family of the VM image for the instance to be launched"
@@ -43,24 +43,24 @@ variable "image_project" {
   type        = string
   default     = "ubuntu-os-cloud"
 }
-
+############
 variable "instance_name" {
   description = "Name of the instance"
   type        = string
   default     = "webserver"
-}
-
+} #done
+#########
 variable "network_tags" {
   description = "A list of network tags to be applied to the instance"
   type        = list(string)
   default     = ["web"]
-}
-
+} #######
+########
 variable "instance_type" {
   description = "The instance type to be used for the Compute Engine instance"
   type        = string
   default     = "e2-micro"
-}
+} ######
 
 variable "environment" {
   default = "dev"
